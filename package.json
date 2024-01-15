@@ -1,10 +1,11 @@
 {
   "name": "my-utilibs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js通用方法库",
   "main": "index.js",
   "scripts": {
-    "build": "rollup --config",
+    "build:types": "tsc",
+    "build": "npm run build:types && rollup --config",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,7 +27,11 @@
     "rollup": "^2.70.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.36.0",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.5"
   }
 }
