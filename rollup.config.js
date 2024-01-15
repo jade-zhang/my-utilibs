@@ -2,6 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import typescript from "rollup-plugin-typescript";
+import json from '@rollup/plugin-json';
 
 export default {
   input: "src/index.ts", // 打包入口
@@ -18,5 +19,6 @@ export default {
     commonjs(), // 将 CommonJS 转换成 ES2015 模块供 Rollup 处理
     typescript(), // 解析TypeScript
     babel({ babelHelpers: "bundled" }), // babel配置,编译es6
+    json(),
   ],
 };
